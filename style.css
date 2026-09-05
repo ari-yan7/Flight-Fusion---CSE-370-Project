@@ -1,11 +1,3 @@
-/* Project modified by M. Shafiul Alam
-   Added Insertion and Deletion Operation + Redesigned UI
-   Original project was created by Faisal Bin Ashraf Sir
-
-   Extended for FlightFusion - Airline Management System.
-   Everything above the "FLIGHTFUSION ADDITIONS" line is the original
-   demo stylesheet, unchanged. */
-
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +10,7 @@ html, body {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    background-color: #0b3d63;            /* fallback if background.jpg is missing */
+    background-color: #0b3d63;            
     background-image: url("../img/background.jpg");
     background-size: cover;
     background-position: center;
@@ -79,16 +71,10 @@ main {
     padding: 40px;
 }
 
-/* ==================================================================
-   FLIGHTFUSION ADDITIONS
-   Same colours, same fonts, same spacing - only new class names.
-   ================================================================== */
-
 .nav_link {
     flex-wrap: wrap;
 }
 
-/* the flight form box behaves exactly like .add_student_box */
 .add_flight_box {
     max-width: 400px;
     width: 100%;
@@ -96,7 +82,6 @@ main {
     padding: 40px;
 }
 
-/* wider box for pages that hold tables */
 .table_box, .wide_box {
     width: 100%;
     max-width: 1200px;
@@ -124,7 +109,6 @@ h1.page_title, h2.page_title {
     margin-bottom: 20px;
 }
 
-/* forms - same look as the demo login form */
 label {
     display: block;
     margin-top: 12px;
@@ -182,7 +166,6 @@ button:hover, .btn:hover {
 .btn_success { background-color: #1d7a44; }
 .btn_success:hover { background-color: #26a15a; }
 
-/* tables - used by every list page */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -208,7 +191,6 @@ table td {
 table tr:last-child td { border-bottom: none; }
 table tr:hover td { background-color: #eef4f9; }
 
-/* small status chips */
 .status {
     padding: 3px 10px;
     border-radius: 20px;
@@ -222,7 +204,6 @@ table tr:hover td { background-color: #eef4f9; }
 .status_promoted, .status_delayed    { background-color: #b8860b; }
 .status_cancelled, .status_rejected, .status_expired { background-color: #a32626; }
 
-/* messages */
 .msg {
     padding: 12px 16px;
     border-radius: 8px;
@@ -233,7 +214,6 @@ table tr:hover td { background-color: #eef4f9; }
 .msg_error { background-color: #a32626; }
 .msg_info  { background-color: #0b3d63; }
 
-/* dashboard tiles */
 .stat_grid {
     display: flex;
     flex-wrap: wrap;
@@ -250,7 +230,6 @@ table tr:hover td { background-color: #eef4f9; }
 .stat_box h3 { font-size: 2rem; color: #0b3d63; font-weight: 500; }
 .stat_box p  { color: #444; }
 
-/* menu tiles on the dashboards */
 .link_grid {
     display: flex;
     flex-wrap: wrap;
@@ -285,13 +264,6 @@ table tr:hover td { background-color: #eef4f9; }
     table { display: block; overflow-x: auto; }
 }
 
-/* ==================================================================
-   FRONT-END IMPROVEMENTS
-   Extra styles for the Seat Swap, Weather and Discount pages.
-   These are only for looks - no page logic uses them.
-   ================================================================== */
-
-/* small grey line under a page title */
 .page_intro {
     color: #e6eef5;
     margin-bottom: 22px;
@@ -299,12 +271,10 @@ table tr:hover td { background-color: #eef4f9; }
     line-height: 1.6;
 }
 
-/* a card with a coloured bar on the left side */
 .card_blue   { border-left: 6px solid #0b3d63; }
 .card_green  { border-left: 6px solid #1d7a44; }
 .card_orange { border-left: 6px solid #b8860b; }
 
-/* heading row inside a card: title on the left, small note on the right */
 .card_head {
     display: flex;
     justify-content: space-between;
@@ -319,17 +289,14 @@ table tr:hover td { background-color: #eef4f9; }
     color: #56707f;
 }
 
-/* tables scroll sideways on small screens instead of breaking the card */
 .table_wrap {
     width: 100%;
     overflow-x: auto;
     border-radius: 10px;
 }
 
-/* grey text used for empty tables */
 .empty_row { color: #777; font-style: italic; }
 
-/* two form fields side by side */
 .form_grid {
     display: flex;
     flex-wrap: wrap;
@@ -337,7 +304,6 @@ table tr:hover td { background-color: #eef4f9; }
 }
 .form_grid .field { flex: 1 1 220px; }
 
-/* nicer inputs and selects on these pages */
 .card input[type="text"],
 .card input[type="number"],
 .card input[type="date"],
@@ -355,7 +321,6 @@ table tr:hover td { background-color: #eef4f9; }
     background-color: #ffffff;
 }
 
-/* ---------- Seat Swap ---------- */
 .seat_badge {
     display: inline-block;
     min-width: 46px;
@@ -368,7 +333,6 @@ table tr:hover td { background-color: #eef4f9; }
 }
 .seat_badge_grey { background-color: #6b7f8c; }
 
-/* the "your seat" summary box */
 .seat_summary {
     display: flex;
     flex-wrap: wrap;
@@ -390,7 +354,7 @@ table tr:hover td { background-color: #eef4f9; }
 }
 .seat_summary strong { color: #0b3d63; font-weight: 500; }
 
-/* ---------- Weather ---------- */
+
 .weather_grid {
     display: flex;
     flex-wrap: wrap;
@@ -414,7 +378,6 @@ table tr:hover td { background-color: #eef4f9; }
 }
 .weather_card p { font-size: 0.95rem; color: #d5e5f2; }
 
-/* the promise / rule list */
 .rule_list { list-style: none; margin-top: 10px; }
 .rule_list li {
     padding: 10px 0 10px 28px;
@@ -430,7 +393,6 @@ table tr:hover td { background-color: #eef4f9; }
     color: #135b93;
 }
 
-/* ---------- Discounts ---------- */
 .discount_grid {
     display: flex;
     flex-wrap: wrap;
@@ -463,7 +425,6 @@ table tr:hover td { background-color: #eef4f9; }
 .discount_card_age { border-top-color: #0b3d63; }
 .discount_card_age .percent { color: #0b3d63; }
 
-/* the numbered "how it works" steps */
 .step_list { list-style: none; counter-reset: step; }
 .step_list li {
     counter-increment: step;
